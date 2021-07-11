@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        form {
+            border: 1px;
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+    <h2>CÔNG CỤ CHUYỂN ĐỔI TIỀN TỆ</h2>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th></th>
+        <th>From Currency</th>
+        <th></th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><label><input type="text" id="num" placeholder="Nhập số tiền"></label></td>
+        <td></td>
+        <td><label><select id="country1">
+            <option value="VN">VietNam</option>
+            <option value="USD">American</option>
+        </select></label></td>
+        <td></td>
+        <td><label><select id="country2">
+            <option value="VN">VietNam</option>
+            <option value="USD">American</option>
+        </select></label></td>
+        <td><button type="button" onclick="showConvert()">Convert</button></td>
+    </tr>
+</table>
+    <p id="result"></p>
+    </fieldset>
+</form>
+</body>
+</html>
+
+<script>
+    function showConvert() {
+        let a = parseInt(document.getElementById("num").value);
+        let b = document.getElementById("country1").value;
+        let c = document.getElementById("country2").value;
+        let d
+        if ((b === "VN") && (c === "USD")) {
+            d = a / 23000;
+        } else {
+            d = a * 23000;
+        }
+        document.getElementById("result").innerText = "Result:  " + d;
+    }
+</script>

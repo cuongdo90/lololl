@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu, toán tử Part 4</title>
+</head>
+<body>
+Nhập bán kính:
+<input type="text" id="num">
+<br>
+<button type="button" onclick="calPeri()">Tính chu vi</button>
+<br>
+<p id="result"></p>
+</body>
+</html>
+
+<script>
+    function calPeri(){
+        let a = parseInt(document.getElementById("num").value);
+        b = 2 * a * Math.PI;
+        document.getElementById("result").innerText = "Bán kính = " + a + "m." + " Chu vi hình tròn = " + b + "m";
+    }
+</script>

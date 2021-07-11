@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử - part 2</title>
+</head>
+<body>
+Nhập <sup>0</sup>C:
+<input type="text" id="num"><br> <br>
+
+<button type="button" onclick="changeDegree()">Show</button>
+<br>
+<p id="result"></p>
+</body>
+</html>
+
+<script>
+function changeDegree(){
+  let a = document.getElementById("num").value;
+  b = (a * 9)/5 + 32;
+  document.getElementById("result").innerText = a + " độ C" + " = " + b + " độ F";
+}
+</script>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng thẻ HTML cơ bản</title>
+</head>
+<body>
+<h1>HTML: HyperText Markup Language</h1>
+<p>Tim Berners-Lee inverted the first browser at CERN, to enable research to share their research with eachother</p>
+<a href="http://home.web.cern.ch/topics/birth-web" target="_blank">Read more about the history of HTML</a>
+<br>
+<img src="images.jpg" width="300" alt="Tim berners">
+<br>
+<a href="https://www.w3schools.com/html/">Image courstery CERN</a>
+</body>
+</html>

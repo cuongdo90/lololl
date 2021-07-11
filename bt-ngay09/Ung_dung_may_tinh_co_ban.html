@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính cơ bản</title>
+  <style>
+    form{
+      width: 500px;
+    }
+    input{
+      margin: auto;
+      align-items: center;
+
+    }
+  </style>
+</head>
+<body>
+<form>
+  <fieldset>
+<h3>Calculator</h3>
+<label><input type="text" id="num1"></label> <span>&nbsp</span><label><input type="text" id="num2"></label>
+<br> <br>
+<button type="button" onclick="add()">Addition(+)</button> <span>&nbsp</span>
+<button type="button" onclick="sub()">Subtraction(-)</button> <span>&nbsp</span>
+<button type="button" onclick="mul()">Multiplication(x)</button> <span>&nbsp</span>
+<button type="button" onclick="div()">Division(/)</button> <span>&nbsp</span>
+<br>
+<p id="result"></p>
+  </fieldset>
+</form>
+</body>
+
+</html>
+
+<script>
+  function add(){
+    let a = parseInt(document.getElementById("num1").value);
+    let b = parseInt(document.getElementById("num2").value);
+    c = a + b;
+    document.getElementById("result").innerText = "Result Division: " + c;
+  }
+  function sub(){
+    let a = parseInt(document.getElementById("num1").value);
+    let b = parseInt(document.getElementById("num2").value);
+    c = a - b;
+    document.getElementById("result").innerText = "Result Division: " + c;
+  }
+  function mul(){
+    let a = parseInt(document.getElementById("num1").value);
+    let b = parseInt(document.getElementById("num2").value);
+    c = a * b;
+    document.getElementById("result").innerText = "Result Division: " + c;
+  }
+  function div(){
+    let a = parseInt(document.getElementById("num1").value);
+    let b = parseInt(document.getElementById("num2").value);
+    c = a / b;
+    document.getElementById("result").innerText = "Result Division: " + c;
+  }
+</script>

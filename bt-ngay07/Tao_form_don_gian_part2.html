@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng ký học viên</title>
+  <style>
+    form{
+      width: 300px;
+      border: 2px;
+      background: tan;
+    }
+    h3{
+      color: blue;
+      background: cyan;
+      width: border-box;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+  <table>
+    <tr>
+      <td class="inf">Họ và tên</td>
+      <td><label><input type="text" style="width: 200px"></label></td>
+    </tr>
+    <tr>
+      <td class="inf">Ngày sinh</td>
+      <td><label><input type="text" style="width: 150px"></label></td>
+    </tr>
+    <tr>
+      <td class="inf">Giới tính</td>
+      <td><label><input type="radio">Nam</label><span>&nbsp</span><label><input type="radio">Nữ</label></td>
+    </tr>
+    <tr>
+      <td class="inf">Địa chỉ</td>
+      <td><label><input type="text" style="width: 180px; height: 50px"></label></td>
+    </tr>
+    <tr>
+      <td class="inf">Lớp</td>
+      <td><label><label><select name="pickcl" >
+        <option>-Chọn lớp-</option>
+        <option value="cl1">Lớp 1</option>
+        <option value="cl2">Lớp 2</option>
+        <option value="cl2">Lớp 3</option>
+        <option value="cl2">Lớp 4</option>
+        <option value="cl2">Lớp 5</option>
+      </select></label></label></td>
+    </tr>
+    <tr>
+      <td class="inf">Email</td>
+      <td><label><input type="text" style="width: 160px"></label></td>
+    </tr>
+    <tr>
+      <td class="inf">Điện thoại</td>
+      <td><label><input type="text" style="width: 160px"></label></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><label><input type="submit" style="width: 60px" value="Đăng ký"></label><span>&nbsp</span><label><input type="reset" style="width: 60px" value="Nhập lại"></label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

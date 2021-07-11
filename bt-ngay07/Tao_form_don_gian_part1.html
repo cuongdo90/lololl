@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form sở thích của bạn</title>
+  <style>
+    form {
+      width: 500px;
+    }
+    h3 {
+      text-align: center;
+      background: orangered;
+      color: white;
+      height: 25px;
+    }
+    .hob{
+      color: orangered;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <fieldset>
+    <h3>SỞ THÍCH CỦA BẠN</h3>
+    <table>
+      <tr>
+        <td style="color: blue; width: 120px" align="right">Họ và tên</td>
+        <td colspan="3"><label><input type="text" placeholder="(yourname)" style="width: 250px"></label></td>
+      </tr>
+      <tr>
+        <td style="color: blue; width: 120px" align="right">Email</td>
+        <td colspan="3"><label><input type="text" placeholder="(yourmail)" style="width: 250px"></label></td>
+      </tr>
+      <tr>
+        <td style="color: blue" align="right">Sở thích</td>
+        <td class="hob"><label><input type="checkbox" name="hobby"> Thể thao</label></td>
+        <td class="hob"><label><input type="checkbox" name="hobby"> Âm nhạc</label></td>
+        <td class="hob"><label><input type="checkbox" name="hobby"> Đọc sách</label></td>
+         <tr>
+      <td></td>
+      <td class="hob"><label><input type="checkbox" name="hobby"> Lướt Web</label></td>
+      <td class="hob"><label><input type="checkbox" name="hobby"> Chơi Game</label></td>
+      <td class="hob"><label><input type="checkbox" name="hobby"> Điện ảnh</label></td>
+         <tr>
+      <td></td>
+      <td class="hob"><label><input type="checkbox" name="hobby"> Du lịch</label></td>
+    </tr>
+      </tr>
+      <tr>
+      <td></td>
+        <td><label><input type="submit" value="Gửi thông tin" style="width: 100px"></label></td>
+        <td><label><input type="reset" value="Nhập lại"></label></td></tr>
+    </table>
+  </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu, toán tử Par 3</title>
+</head>
+<body>
+Nhập bán kính:
+<input type="text" id="num">
+<br>
+<button type="button" onclick="calArea()">Tính diện tích</button>
+<br>
+<p id="result"></p>
+</body>
+</html>
+
+<script>
+  function calArea(){
+let a = parseInt(document.getElementById("num").value);
+b = a * a * Math.PI;
+document.getElementById("result").innerText = "Bán kính = " + a + "m2." + " Diện tích hình tròn = " + b + "m2";
+  }
+</script>

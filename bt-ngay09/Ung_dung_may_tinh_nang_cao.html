@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính nâng cao</title>
+  <style>
+    body {
+      font-family: Roboto;
+      background: #373B44;
+    }
+
+    fieldset {
+      background-color: gray;
+    }
+
+    form {
+      width: 450px;
+      height: 1000px;
+      border-radius: 5px;
+      padding: 20px;
+      margin: auto;
+    }
+
+    input {
+      text-align: right;
+      height: 100px;
+      margin: 10px 20px;
+      font-size: 30px;
+    }
+
+    h3 {
+      text-align: center;
+      color: yellow;
+    }
+
+    button {
+      width: 70px;
+      height: 70px;
+      margin: 15px;
+      float: left;
+      border-radius: 60%;
+      border-width: 0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    form table button.system1 {
+      font-size: 25px;
+      background-color: #20b2aa;
+    }
+
+    form table button.system2 {
+      font-size: 25px;
+      background-color: #ffa500;
+    }
+
+    form table button.system3 {
+      font-size: 25px;
+      background-color: #f08080;
+    }
+
+    form table button.system4 {
+      font-size: 25px;
+      background-color: #7d93e0;
+    }
+
+    form table button.system5 {
+      font-size: 25px;
+      background-color: #9477af;
+    }
+
+    form table button.system6 {
+      font-size: 25px;
+      background-color: rgba(255, 60, 0, 0.89);
+    }
+
+    u {
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <fieldset>
+      <h3> CASIO - FX570ES PLUS</h3>
+      <table>
+        <tr>
+          <input type="text" id="result" class="ket_qua">
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>
+            <button type="button" onclick="squa()">x<sup>2</sup></button>
+          </td>
+          <td>
+            <button type="button" onclick="op()">(</button>
+          </td>
+          <td>
+            <button type="button" onclick="cl()">)</button>
+          </td>
+          <td><button type="reset" class="system6">C</button></td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="percent()">%</button>
+          </td>
+          <td>
+            <button type="button" onclick="root()"><span>&#8730</span></button>
+          </td>
+          <td>
+            <button type="button" onclick="pi()"><span>&#8508;</span></button>
+          </td>
+          <td>
+            <button type="button" onclick="divide()" class="system1">&divide</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="seven()">7</button>
+          </td>
+          <td>
+            <button type="button" onclick="eight()">8</button>
+          </td>
+          <td>
+            <button type="button" onclick="nine()">9</button>
+          </td>
+          <td>
+            <button type="button" onclick="multi()" class="system2">&times</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="four()">4</button>
+          </td>
+          <td>
+            <button type="button" onclick="five()">5</button>
+          </td>
+          <td>
+            <button type="button" onclick="six()">6</button>
+          </td>
+          <td>
+            <button type="button" onclick="subtr()" class="system3">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="one()">1</button>
+          </td>
+          <td>
+            <button type="button" onclick="two()">2</button>
+          </td>
+          <td>
+            <button type="button" onclick="three()">3</button>
+          </td>
+          <td>
+            <button type="button" onclick="add()" class="system4">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="button" onclick="zero()" style="width: 165px; height:80px">0</button>
+          </td>
+          <td>
+            <button type="button" onclick="dot()">.</button>
+          </td>
+          <td>
+            <button type="button" onclick="equal()" class="system5">=</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center"><i><u>Best choice for Math</u></i></td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>
+
+<script>
+  function zero() {
+    document.getElementById("result").value += 0;
+  }
+
+  function one() {
+    document.getElementById("result").value += 1;
+  }
+
+  function two() {
+    document.getElementById("result").value += 2;
+  }
+
+  function three() {
+    document.getElementById("result").value += 3;
+  }
+
+  function four() {
+    document.getElementById("result").value += 4;
+  }
+
+  function five() {
+    document.getElementById("result").value += 5;
+  }
+
+  function six() {
+    document.getElementById("result").value += 6;
+  }
+
+  function seven() {
+    document.getElementById("result").value += 7;
+  }
+
+  function eight() {
+    document.getElementById("result").value += 8;
+  }
+
+  function nine() {
+    document.getElementById("result").value += 9;
+  }
+
+  function percent() {
+    document.getElementById("result").value /= 100;
+  }
+
+  function add() {
+    document.getElementById("result").value += "+";
+  }
+
+  function subtr() {
+    document.getElementById("result").value += "-";
+  }
+
+  function multi() {
+    document.getElementById("result").value += "*";
+  }
+
+  function divide() {
+    document.getElementById("result").value += "/";
+  }
+
+  function squa() {
+    var result = document.getElementById("result").value;
+    document.getElementById("result").value = result + '*' + result;
+  }
+
+  function op() {
+    document.getElementById("result").value += "(";
+  }
+
+  function cl() {
+    document.getElementById("result").value += ")";
+  }
+
+  function dot() {
+    document.getElementById("result").value += ".";
+  }
+
+  function root() {
+    var result = document.getElementById("result").value;
+    document.getElementById("result").value = Math.sqrt(result);
+  }
+
+  function pi() {
+    document.getElementById("result").value += Math.PI;
+  }
+
+  function equal() {
+    document.getElementById("result").value = eval(document.getElementById("result").value);
+  }
+</script>
