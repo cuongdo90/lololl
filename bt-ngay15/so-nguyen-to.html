@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Hiển thị 20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <!-- b1 khai bao bien so nguyen N, nhap gia tri cho so luong can in ra
+        b2: khai bao bien "count" voi dk(count=0; count<N)
+        b3: khai bao bien "n" va gan (n=2), n la gia tri phan tu trong N
+        b4: xet dieu kien de tim n la so nguyen to
+        b5: tien hanh qua trinh va nhan ket qua. -->
+    <script>
+        // b1,b2,3
+        let n = 20;
+        let count = 0;
+        let a = 2;
+        // b5
+        while (count < n){
+            if(isSNT(a)){
+                document.write(a + ' ');
+                count++;
+            }
+            a++
+        }
+        // b4
+        function isSNT(number){
+            for(let a =2; a < number; a++){
+                if (number %a ===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
