@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt tinh tong so chan </title>
+</head>
+<body>
+   <script>
+ 
+ function tinh_tong(n)
+    {
+        var tong = 0;
+        var index = 0;
+
+        while (index <= n)
+        {
+            // Nếu số chẵn thì cộng vào
+            if (index % 2 == 0){
+                tong += index;
+            }
+
+            // tăng biến đếm
+            index++;
+        }
+        return tong;
+    }
+
+    var n = parseInt(prompt("Nhập số cần kiểm tra"));
+    document.write("Tổng số chẵn từ 1 tới " + n + " là: " + tinh_tong(n));
+ 
+     
+   </script>
+</body>
+</html>

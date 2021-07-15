@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vong lap while</title>
+</head>
+<body>
+    <!-- Viết chương trình nhận vào một số từ hộp thoại, 
+        việc nhập kết thúc khi người dùng nhập vào giá trị -1. 
+        Mỗi giá trị nhập được sẽ được hiển thị ra
+         và thực hiện tính tổng các giá trị đó. 
+        B1: -viet chuong trinh nhap vao mot so tu hop thoai.
+        B1: -dieu kien chuong trinh dung khi nhap gia tri -1.
+        B3: -hien thi gia tri nhap vao.
+        B4: -tinh tong cac gia tri. -->
+        <script>
+            // b1:
+            let num = 0;
+            let total= 0;
+            // b2,3:
+            while( num != -1 ) {
+                num = +prompt("Enter a number: ");
+                alert(num);
+            // b4:
+            total += num;
+            alert(total);
+            }
+        </script>
+</body>
+</html>
