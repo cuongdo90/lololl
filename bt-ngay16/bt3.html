@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+    <!-- b1: khai báo mảng bất kỳ.
+         b2: khai báo mảng "max" và gán giá trị bằng giá trị đầu mảng trên.
+         b3: khai báo mảng trung gian với giá trị = 0.
+         b4: xác định điều kiện sàng lọc phần tử càn tìm theo yêu cầu.
+        -->
+</head>
+<body>
+    <script>
+        // b1,2,3:
+        let mangA = [1,2,3,4,5,6,7,8,9];
+        let max = mangA[0];
+        let trung_gian =0;
+        document.write("mang ["+mangA+"] <br>");
+        //  b4:
+        for (let i =1; i< mangA.length; i++){
+            if (mangA[i] > max){
+                max = mangA[i];
+            trung_gian = mangA[i];
+            }
+        }
+        document.write("số cần tìm là"+ " :"+max);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cờ caro</title>
+    <!-- b1: tạo định dạng cho bàn cờ.
+         b2: hiển thị bàn cờ 
+         b2.1: khai báo mảng 1 = hiển thị định dạng
+         b2.2: khai báo 1 mảng rỗng
+         b2.3: khai báo 1 biến rỗng
+         b3:  xác định diều kiện cho vòng lặp 1 để tạo hàng
+         b4: xác định điều kiện cho vòng lặp chồng nhau để hiện thị cột cho toàn bàn cờ
+         b5: thiết lập hàm để thực hiện các sự kiện thay đổi trong quá trình chơi-->
+</head>
+<body >
+    <!-- b1 -->
+    <h1>Cờ Caro</h1>
+    <p id="caro"></p>
+    <input type="button" value="Thay Đổi" onclick="changer()">
+
+    <script>
+        // b2..
+        let co = document.getElementById("caro");
+        let banco = [];
+        let data = "";
+        // b3
+        for (let i=0; i<7; i++){
+            banco[i] = new Array(0,0,0,0,0,0,0)
+        }
+       //b4 
+        for(let i=0; i<banco.length; i++){
+            data += "<br>"
+            for (let j=0; j<banco[i].length;j++){
+                data += banco[i][j] + "  "
+            }
+        }
+        co.innerHTML  = data;
+        // b5
+        function changer() {
+            let dong, cot;
+            dong = Number(prompt("Nhập dòng thay đổi") - 1);
+            cot = Number(prompt("Nhập cột thay đổi") - 1);
+            data = "";
+            banco[dong][cot] = "X";
+            for (let i=0;i<banco.length;i++){
+                data += "<br>"
+                for (let j=0; j<banco[i].length; j++){
+                    data+= banco[i][j] + "  "
+                }
+            }
+            co.innerHTML = data;
+        }
+    </script>
+</body>
+</html>

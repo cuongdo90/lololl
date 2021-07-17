@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuực hành đảo ngược các phần tử trong mảng </title>
+    <!-- b1: khai báo các mảng và phần tử của mảng.
+         b2: khai báo 1 bien với giá trị =0, để duyệt phần tử đầu tiên của mảng.
+         b3: khai báo biến thứ 2 với giá trị bằng điểm cuối của mảng.
+         b4: khai bao 1 mang trung gian.
+         b5: xác định điều kiện để vòng lặp thực hiện yêu cầu đè bài. -->
+</head>
+<body>
+    <script>
+        // b1,2,3,4: 
+    //     let mangA = [1,2,3,4,5,6,7];
+    //     let dau = 0;
+    //     let cuoi = mangA.length -1;
+    //     let trung_gian
+    //     document.write("mang [" + mangA+"] <br>")
+    //     // b4:
+    //     for (let i=dau; i<=cuoi; i++){
+    //         trung_gian = mangA[dau];
+    //         mangA[dau] = mangA[cuoi];
+    //         mangA[cuoi] = trung_gian;
+    //         dau++;
+    //         cuoi--;
+    //     }
+    //     document.write("dao_nguoc ["+ mangA+"]");
+    // // cach2: voi vong lap while
+    // b1,2,3,4:
+    let mangA =[1,2,3,4,5,6,7];
+    let dau = 0;
+    let cuoi = mangA.length -1;
+    let trung_gian;
+    document.write("mang [" + mangA+"] <br>")
+    // b5:
+    while (dau< cuoi){
+         trung_gian = mangA[dau];
+        mangA[dau] = mangA[cuoi];
+        mangA[cuoi] = trung_gian;
+        dau++;
+        cuoi--;
+    }
+    document.write("dao_nguoc ["+mangA+"]");
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thực hành tìm giá trị trong mảng</title>
+    <!-- đề bài: Viết một chương trình JavaScript để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không.
+         Nếu có in ra vị trí của phần tử đó. 
+         b1: tạo giao diện "prompt" để giá trị cần tìm.
+         b2: tạo mảng bất kỳ để kiểm tra.
+         b3: xác định vòng lặp và điều kiện theo đề bài.-->
+</head>
+<body>
+    <script>
+        // b1,2:
+        let value = prompt("Enter a number: ");
+        let numbers = [1,2,3,4,5,6,7];
+        // b3
+        for (let i = 0; i < numbers.length; i++) {
+            if (value == numbers[i]) {
+        alert("Value " + numbers[i] + "found at " + i);
+    }
+}
+    </script>
+</body>
+</html>

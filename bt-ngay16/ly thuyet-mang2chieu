@@ -1,0 +1,72 @@
+                MANG HAI CHIEU/DA CHIEU
+   what?
+     Mảng hai chiều là loại mảng mà mỗi phần tử của mảng đó là một mảng khác.
+    Why?
+    Cấu trúc này giúp ta lưu trữ dữ liệu đa dạng và phong phú hơn nhiều so với mảng một chiều.
+    how?
+ 1.  Khai báo mảng hai chiều trong javascript
+   Để khai báo mảng hai chiều trong js 
+   thì ta sẽ khai báo một mảng một chiều, 
+   sau đó mỗi phần tử của mảng ta sẽ gán giá trị là một mảng khác.
+ep:                var numbers = [
+                [5, 12, 17, 9, 3],
+                [13, 4, 8, 14, 1],
+                [9, 6, 3, 7, 21]
+            ];
+            alert(numbers[1][2]); // In ra 8 
+
+  2. Lấy phần tử mảng hai chiều trong javascript
+   Mỗi phần tử được chỉ định bởi hai thông số, 
+   thứ nhất là chỉ mục trên hàng và thứ hai là chỉ mục trên cột.
+ep:                 array[row][column]
+
+  3. Thêm phần tử vào mảng hai chiều trong javascript
+    _ Để thêm một phần tử vào mảng thì ta có hai trường hợp
+        + Thêm vào cuối mảng hai chiều
+      Ta sử dụng hàm push() để thêm một phần tử vào cuối mảng hai chiều.  
+ep:              var numbers = [];
+                numbers.push([5, 12, 17, 9, 3]);
+                numbers.push([13, 4, 8, 14, 1]);
+                numbers.push([9, 6, 3, 7, 21]);
+                console.log(numbers);
+
+        + Thêm vào đầu mảng hai chiều     
+      Ta sử dụng hàm unshift() để thêm phần tử vào đầu mảng.  
+ep:             var numbers = [];
+                numbers.unshift([5, 12, 17, 9, 3]);
+                numbers.unshift([13, 4, 8, 14, 1]);
+                numbers.unshift([9, 6, 3, 7, 21]);
+                console.log(numbers);
+
+   4. Duyệt mảng hai chiều trong javascript
+    Để duyệt qua các phần tử trong mảng hai chiều thì chúng ta sử dụng hai vòng lặp lồng nhau.  
+    Vòng lặp đầu tiên sẽ lặp theo hàng và vòng lặp thứ hai sẽ lặp theo cột.
+ ep:           var numbers = [
+                [5, 12, 17, 9, 3],
+                [13, 4, 8, 14, 1],
+                [9, 6, 3, 7, 21]
+            ];
+            
+            // Lặp theo hàng
+            for (var i = 0; i < numbers.lenght; i++){
+                
+                // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+                for (var j = 0; j < numbers[i].length; j++){
+                    console.log(numbers[i][j]);
+                }
+            }
+        *  nếu bạn muốn tạo một mảng random 
+        các số ngẫu nhiên gồm 5x4 = 20 phần tử thì làm như sau:
+ep:        var numbers = [];
+ 
+            // Lặp theo hàng
+            for (var i = 0; i < 4; i++){
+                numbers[i] = [];
+                // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+                for (var j = 0; j < 5; j++){
+                    numbers[i][j] = Math.floor((Math.random() * 10) + 1);
+                }
+            }
+            
+            console.log(numbers);
+

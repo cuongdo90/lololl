@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại 
+        được nhập bởi người truy cập. 
+             Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. 
+             Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+
+    </title>
+</head>
+<body>
+    <script>
+     let nhietdo = Number(prompt("nhap vao nhiet do"));
+     while (nhietdo<20 || nhietdo>40){
+         if(nhietdo<20){
+             alert("lanh")
+             nhietdo = Number(prompt("tang nhiet do"));
+         }
+         else if (nhietdo>40){
+             alert("nong")
+             nhietdo = Number(prompt("ha xuong"));
+         } 
+     }
+    alert("ok")
+    
+    </script>
+    
+</body>
+</html>

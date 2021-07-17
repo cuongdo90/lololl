@@ -1,0 +1,90 @@
+MẢNG 1 CHIỀU
+what?
+Mảng là một loại biến dạng tập hợp nhiều phần tử, 
+trong đó mỗi phần tử sẽ được đánh dấu vị trí bằng chỉ mục.
+why?when?
+Chúng ta thường sử dụng mảng để lưu trữ dữ liệu dạng danh sách.
+how?
+  1. Khai báo mảng trong javascript
+    Chúng ta có hai cách khai báo mảng, thứ nhất là sử dụng từ khóa new Array()
+    và thứ hai là sử dụng cặp dấu ngoặc vuông [].
+ep:         var name_array = new Array();
+        // 
+            var name_array = new Array(1,2,3);
+    // Hoặc
+            var name_array = [];
+        // 
+        var name_array = [1,2,3];
+  2. Truy xuất các phần tử trong mảng  
+   Để truy xuất đến một phần tử trong mảng thì chúng ta phải biết được vị trí cần lấy.
+            + cú pháp: tenmang[vitri-cantim]
+ep:      var t = new Array(1,2,3);
+      alert(t[0]); // kết quả là 1
+      alert(t[1]); // kết quả là 2
+      alert(t[2]); // kết quả là 3
+   3. In mảng ra trình duyệt và console
+   Để debug xem các giá trị trong mảng thì ta sử dụng hàm join()
+               và console.log().
+ep: + array.join():
+                var t = new Array(1,2,3);
+            document.write(t.join()); // kết quả 1,2,3
+            document.write(t.join('-')); // kết quả 1-2-3
+    + console.log():
+            var t = new Array(1,2,3);
+              console.log(t);
+   4.  Sử dụng vòng lặp để duyệt mảng trong javascript
+   Chúng ta sẽ học cách sử dụng các vòng lặp đã học để duyệt mảng JS.  
+   Để đếm tổng số phần tử của một mảng chúng ta sẽ dùng thuộc tính length của nó.
+ep: +           var t = new Array(1,2,3);
+                alert(t.length); // 3 phần tử
+    + Duyệt mảng với vòng lặp for:
+                var name_array = [1,2,3];
+         for (var i = 0; i < name_array.length; i++){
+                document.write(name_array[i]);
+                }
+    + Duyệt mảng với vòng lặp while:
+            var name_array = [1,2,3];
+            var index = 0;
+            while (index < name_array.length){
+                document.write(name_array[index]);
+                index++;
+            }
+    5. Các hàm xử lý mảng trong javascript
+    + Hàm array.valueOf(); hàm array.join()
+ có nghĩa là nó sẽ nối các phần tử với nhau vào một chuỗi cách nhau bởi dấu phẩy.   
+    + Hàm array.push()
+    Hàm này sẽ thêm một phần tử vào cuối mảng.
+    + Hàm array.pop()
+    Ngược với hàm array.push(), hàm này có tác dụng xóa đi phần tử cuối cùng trong mảng.
+    + Hàm array.shift()
+    Hàm xóa phần tử đầu tiên của mảng, sau đó dồn các phần tử phía sau xuống một bậc.
+    + Hàm array.unshift()
+     Thêm một phần tử vào vị trí đầu tiên của mảng, đồng thời đẩy các phẩn từ phía sau lên một bậc
+    + Hàm array.splice()
+    Thêm, thay thế phần tử trong mảng.
+        array.splice(vitri-can-thay, vị tri bi thay/xoa, "gia tri dc them/thay" )
+    + Hàm array.sort()
+    Hàm này dùng để sắp xếp các phần tử trong mảng theo thứ tự chữ cái alpha.
+    + Hàm array.reverse()
+    Hàm đảo ngược các phẩn tử lại.
+    + Hàm array.concat()
+    Hàm dùng để nối hai mảng với nhau và trả về một mảng gồm tổng số phần tử của hai mảng đó.
+    + Hàm array.slice()
+    Hàm dùng để lấy một số phần tử con trong mảng.
+     _ array.slice(vitri-bat-dau, vitri-ket-thuc)
+     _ array.slice(x) xet tu x den cuoi mang.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
