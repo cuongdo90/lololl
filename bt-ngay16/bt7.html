@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập từ điển</title>
+    <!-- b1 tạo form cho phép người dùng tìm kiếm 
+         b2 tạo 2 mảng tiếng anh và tiếng viet co đọ dài bằng nhau
+         b3 tao 2 mang trung gian de so sanh
+         b4 xac dinh dieu kien, xac lap vong lap for -->
+    
+</head>
+<body> 
+    <!-- b1 -->
+    <input type="text" id="ten" >
+    <input type="button" value="tìm" onclick="ketqua()">
+    <p id="kq"></p>
+    <script>
+        // b2,3:
+        function ketqua(){
+            let tienganh =["hello","you","home"];
+            let tiengviet =["xin chào","bạn","nhà"];
+            let trunggian =document.getElementById("ten").value;
+            let trunggian1 =0;
+            // b4:
+            for(let i=0; i<tiengviet.length;i++){
+                if (trunggian===tienganh[i]){
+                    if(trunggian1=tiengviet[i]){
+                        document.getElementById("kq").innerHTML=trunggian1;
+                    }else {
+                   document.write("không tìm thấy");
+                }
+                    
+                }
+             }
+
+        }
+    </script>
+</body>
+</html>
