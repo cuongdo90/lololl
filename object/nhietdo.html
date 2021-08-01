@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+let Temperature = function (C) {
+    this.doC = C
+    this.getDoC = function () {
+        return this.doC
+    }
+    if (this.doC> -273) {
+        this.changeCtoF = function () {
+            return ((this.doC*1.8) + 32)
+        }
+        
+        this.changeCtoK = function () {
+            return this.doC + 273.15
+        }
+    }else {
+        return alert("Nhiệt độ *C phải lớn hơn -273")
+    }
+}
+
+let nhietdo = Number(prompt("NHập nhiệt độ "))
+let temp = new Temperature(nhietdo)
+let C = temp.getDoC()
+let F = temp.changeCtoF()
+let K = temp.changeCtoK()
+    alert("Nhiệt độ "+C +"*C bằng "+F+"*F và "+K+"*K")
+</script>
+</body>
+</html>

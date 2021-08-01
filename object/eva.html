@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    let Apple = function(weight){
+        this.weight = weight
+        this.getWeightApple = function () {
+            return this.weight
+        }
+        this.decrease = function () {
+            if (this.weight > 0){
+                this.weight--
+            }
+        }
+    }
+
+    let Human = function () {
+        this.setApple = function (apple) {
+            this.apple = apple
+        }
+        this.getApple = function () {
+            return this.apple.getWeightApple()
+        }
+
+        this.checkApple = function () {
+            if (this.getApple() <= 0){
+                return false
+            }
+            return true
+        }
+
+        this.eat = function () {
+            if(this.checkApple() == false){
+                document.write( " đã cắn hết táo <br>")
+                console.log( " đã cắn hết táo")
+            }else{
+                this.apple.decrease()
+                document.write(" đã cắn 1 miếng táo còn " + this.getApple() + " miếng <br>")
+                console.log( " đã cắn 1 miếng táo còn " + this.getApple() + " miếng")
+            }
+        }
+
+        this.setName = function (name) {
+            this.name = name
+        }
+        this.setGender = function (boolean) {
+            this.gender = boolean
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight
+        }
+
+        this.getName = function () {
+            return this.name
+            console.log("Tên là "+this.name)
+        }
+        this.getWeight = function () {
+            return this.weight
+            console.log("Cân nặng "+this.name+" kg")
+        }
+        this.isMale = function () {
+            if(this.gender == false){
+                return "Nữ"
+                console.log("Giới tính nữ")
+            }
+            return "Nam"
+            console.log("Giới tính nam")
+        }
+
+        this.stay = function (string) {
+            this.string = string
+            console.log(string)
+        }
+    }
+
+    let apple = new Apple(10)
+    let human = new Human()
+    human.setName("Adam")
+    human.setWeight("90kg")
+    human.setGender(true)
+    document.write("Tên: "+human.name+" - Giới tính: "+human.gender+" - Cân nặng: "+human.weight+"<br>")
+    human.setApple(apple)
+    for (let i=0; i<15;i++){
+        human.eat()
+    }
+
+</script>
+</body>
+</html>
