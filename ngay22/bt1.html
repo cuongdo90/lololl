@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>3331</div>
+    <div>3332</div>
+    <div>3233</div>
+    <div>3324</div>
+    <div>32235</div>
+    <div>3236</div>
+    <div>32237</div>
+    <div>32238</div>
+    <div>32329</div>
+    <div>323210</div>
+    <button type = "text/css" onClick ="change_backgroud()">Chan backgroud</button>
+    <style type="text/css">
+            div {
+                padding: 10px;
+                margin: 10px
+            }
+    </style>
+    <script>
+        function change_backgroud() {
+            let divs = document.getElementsByTagName("div");
+            for (let i = 0; i<divs.length; i++){
+                if((i+1)%2==0){
+                    divs[i].style.background = "red";
+                }
+                else{
+                    divs[i].style.background = "blue";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
