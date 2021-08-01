@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-image: url("");
+
+}
+
+h2 {
+    font-family: Cambria;
+    color: blue;
+}
+
+table {
+    font-size:1005;
+}
+div {
+    text-align: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: auto;
+}
+
+.header {
+    color: red;
+    font-size: 24px;
+}
+
+
