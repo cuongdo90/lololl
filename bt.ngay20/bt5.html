@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lần xuất hiện của phần tử</title>
+</head>
+<body onload="mang()">
+<script>
+    function mang(){
+        let so = prompt("Nhập vào một số từ 1-20")
+        let mangso = []
+        for (let i=0; i<100; i++){
+            let value = Math.round(Math.random()*20)
+            mangso.push(value)
+        }
+        document.write("["+mangso.join(" - ")+"]<br>")
+        let count = demKyTuLap(mangso,so)
+        let vitri = timViTri(mangso,so)
+        console.log(vitri)
+        document.write("Số "+so+" xuất hiện "+count+" lần trong mảng tại vị trí ["+vitri.join("-")+"]")
+
+    }
+
+    function demKyTuLap(mangso,so) {
+        let count = 0
+        for (let i=0; i<mangso.length; i++){
+            if (mangso[i] == so){
+                count++
+            }
+        }
+        return count
+    }
+    function timViTri(mangso,so) {
+        let vitri = []
+        for (let i=0; i<mangso.length; i++){
+            if (mangso[i] == so){
+                vitri.push(i)
+            }
+        }
+        return vitri
+    }
+</script>
+</body>
+</html>
+</html>

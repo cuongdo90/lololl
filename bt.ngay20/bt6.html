@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="add" placeholder="Thêm sản phẩm"/>
+    <input type="text" id="num" placeholder="Thêm số luọng"/>
+    <input type="button" onclick="addProduct()" style="background-color: blue;" value="Thêm"/>
+    <br>
+    <br>
+    <table border="1px" type="text-align: center" style="background-color:brown">
+        <tr>
+            <th>Tổng sản phẩm</th>
+            <th>Số lượng</th>
+            <th colspan="2" id="change">Thêm/Bớt</th>
+        </tr>
+        <tbody id="san-pham">
+            <td></td>
+            <td></td>         
+            <td></td>         
+        </tbody>
+
+    </table>
+    <script>
+        let products=[
+            ["SAM SUNG",1],
+            ["IPHONE",2], 
+            ["NOKIA",3],
+            ["LG4",4]
+        ]
+        function display (){
+            let str="";
+            for(let i= 0; i<products.length; i++){
+                str += "<tr>"+
+                            "<td>"+products[i][0]+"</td>"+
+                            "<td>"+products[i][1]+"</td>"+
+                            "<td><input type='button' value='edit' onclick='edit(`${i}`)'></td>"+
+                            "<td><input type='button' value='delete'></td>"+
+
+                    "</tr>";
+            }
+            document.getElementById("san-pham").innerHTML=str
+
+        }
+        display();
+        function addProduct(){
+            let ten= document.getElementById("add").value;
+            let soluong= document.getElementById("num").value;
+            let sanpham=[ten,soluong];
+            products.push(sanpham);
+            display();
+            clearInput();
+        }
+
+        function clearInput(){
+            document.getElementById("add").value="";
+            document.getElementById("num").value="";
+        }
+        
+        function edit(){
+                alert( )
+        }
+        
+
+
+    </script>
+</body>
+</html>
